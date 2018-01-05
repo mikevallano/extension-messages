@@ -1,15 +1,5 @@
 console.log('hola from background')
 
-
-chrome.browserAction.onClicked.addListener(tacoClicked)
-
-function tacoClicked(tab) {
-  let msg = {
-    text: 'i was clicked'
-  }
-  chrome.tabs.sendMessage(tab.id, msg);
-}
-
 chrome.runtime.onMessage.addListener(gotTheMessage)
 
 function gotTheMessage(message, sender, sendResponse) {
