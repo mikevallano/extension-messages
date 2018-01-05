@@ -12,6 +12,7 @@ function sendPopupMessage() {
 }
 
 function gotTheMessage(message, sender, sendResponse) {
-  alert(message.greeting)
+  var popup_div = document.getElementById('message_result');
+  popup_div.innerText = 'the number of links on this page is: '+ message.link_count;
   console.log('popup.js got the message', message)
 }
